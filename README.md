@@ -1,6 +1,8 @@
 # meta-ads-open-cli
 
-Meta Ads CLI for AI agents. Read-only access to Meta Marketing API for managing ads across Facebook, Instagram, Messenger, and Audience Network.
+Meta Ads CLI for AI agents (and humans). Analyze ad performance across Facebook and Instagram, pull creative insights with breakdowns, estimate audience reach, retrieve lead form submissions, and more.
+
+**Works with:** OpenClaw, Claude Code, Cursor, Codex, and any agent that can run shell commands.
 
 ## Installation
 
@@ -8,12 +10,26 @@ Meta Ads CLI for AI agents. Read-only access to Meta Marketing API for managing 
 npm install -g meta-ads-open-cli
 ```
 
+Or run directly with npx:
+
+```bash
+npx meta-ads-open-cli --help
+```
+
 ## How it works
 
-- All output is JSON to stdout (machine-readable)
-- Errors go to stderr as `{"error": "..."}`
-- Exit code 0 = success, non-zero = failure
-- Uses Meta Graph API v24.0
+Built on the official [Meta Graph API v24.0](https://developers.facebook.com/docs/graph-api), this CLI authenticates via an OAuth access token (set as an environment variable, credentials file, or per-command flag) and provides read-only access to the Meta Marketing API.
+
+Core endpoints covered:
+
+- **Ad accounts & businesses** -- list and inspect ad accounts, business managers, account users
+- **Campaigns, ad sets & ads** -- browse the full campaign hierarchy with status filtering
+- **Ad creatives** -- list and inspect creative assets
+- **Insights & reporting** -- pull performance metrics with date presets, custom date ranges, breakdowns, and time increments
+- **Audiences** -- custom audiences, saved audiences, and reach estimates
+- **Pixels & conversions** -- Meta Pixels, pixel events, and custom conversions
+- **Pages & Instagram** -- Facebook Pages, Instagram business accounts
+- **Lead gen** -- lead forms and lead submissions
 
 ## Setup
 
