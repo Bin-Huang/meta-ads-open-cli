@@ -1,5 +1,9 @@
 #!/usr/bin/env node
+import { createRequire } from "node:module";
 import { Command } from "commander";
+
+const require = createRequire(import.meta.url);
+const { version } = require("../package.json") as { version: string };
 import { registerAccountCommands } from "./commands/accounts.js";
 import { registerCampaignCommands } from "./commands/campaigns.js";
 import { registerAdCommands } from "./commands/ads.js";
@@ -14,7 +18,7 @@ const program = new Command();
 program
   .name("meta-ads-open-cli")
   .description("Meta Ads CLI for AI agents (Facebook, Instagram, Messenger, Audience Network)")
-  .version("1.0.0")
+  .version(version)
   .option("--format <format>", "Output format", "json")
   .option("--credentials <path>", "Path to credentials JSON file")
   .addHelpText(
