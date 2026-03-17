@@ -1,6 +1,6 @@
 # meta-ads-open-cli
 
-Meta Ads CLI for AI agents (and humans). Analyze ad performance across Facebook and Instagram, pull creative insights with breakdowns, estimate audience reach, retrieve lead form submissions, and more.
+Meta Ads CLI for AI agents (and humans). Analyze ad performance across Meta platforms, pull creative insights with breakdowns, estimate audience reach, retrieve lead form submissions, and more.
 
 **Works with:** OpenClaw, Claude Code, Cursor, Codex, and any agent that can run shell commands.
 
