@@ -17,7 +17,6 @@ export function registerInsightsCommands(program: Command): void {
     .action(async (entityId: string, opts) => {
       try {
         const creds = loadCredentials(program.opts().credentials);
-        const id = entityId.match(/^\d+$/) && !opts.level ? `act_${entityId}` : entityId;
         const params: Record<string, string> = {
           date_preset: opts.datePreset,
           limit: opts.limit,
@@ -31,7 +30,7 @@ export function registerInsightsCommands(program: Command): void {
         if (opts.breakdowns) params.breakdowns = opts.breakdowns;
         if (opts.timeIncrement) params.time_increment = opts.timeIncrement;
         if (opts.after) params.after = opts.after;
-        const data = await callApi({ creds, path: `${id}/insights`, params });
+        const data = await callApi({ creds, path: `${entityId}/insights`, params });
         output(data, program.opts().format);
       } catch (err) {
         fatal((err as Error).message);

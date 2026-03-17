@@ -54,11 +54,11 @@ export function registerAudienceCommands(program: Command): void {
         const creds = loadCredentials(program.opts().credentials);
         const actId = accountId.startsWith("act_") ? accountId : `act_${accountId}`;
         const params: Record<string, string> = {
-          fields: "id,name,description,approximate_count,targeting,run_status,time_created,time_updated",
+          fields: "id,name,description,approximate_count_lower_bound,approximate_count_upper_bound,targeting,run_status,time_created,time_updated",
           limit: opts.limit,
         };
         if (opts.after) params.after = opts.after;
-        const data = await callApi({ creds, path: `${actId}/savedaudiences`, params });
+        const data = await callApi({ creds, path: `${actId}/saved_audiences`, params });
         output(data, program.opts().format);
       } catch (err) {
         fatal((err as Error).message);

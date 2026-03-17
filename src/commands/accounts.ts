@@ -70,10 +70,10 @@ export function registerAccountCommands(program: Command): void {
         const creds = loadCredentials(program.opts().credentials);
         const actId = accountId.startsWith("act_") ? accountId : `act_${accountId}`;
         const params: Record<string, string> = {
-          fields: "id,name,permissions,role",
+          fields: "id,name,tasks",
           limit: opts.limit,
         };
-        const data = await callApi({ creds, path: `${actId}/users`, params });
+        const data = await callApi({ creds, path: `${actId}/assigned_users`, params });
         output(data, program.opts().format);
       } catch (err) {
         fatal((err as Error).message);
