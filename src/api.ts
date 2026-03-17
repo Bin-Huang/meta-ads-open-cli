@@ -1,6 +1,6 @@
 import type { Credentials } from "./auth.js";
 
-const BASE_URL = "https://graph.facebook.com/v22.0";
+const BASE_URL = "https://graph.facebook.com/v24.0";
 
 interface CallOptions {
   creds: Credentials;

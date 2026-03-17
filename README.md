@@ -13,7 +13,7 @@ npm install -g meta-ads-open-cli
 - All output is JSON to stdout (machine-readable)
 - Errors go to stderr as `{"error": "..."}`
 - Exit code 0 = success, non-zero = failure
-- Uses Meta Graph API v22.0
+- Uses Meta Graph API v24.0
 
 ## Setup
 
