@@ -1,10 +1,10 @@
 {
-  "name": "meta-ads-api-cli",
+  "name": "meta-ads-open-cli",
   "version": "0.1.0",
   "description": "Meta Ads CLI for AI agents",
   "type": "module",
   "bin": {
-    "meta-ads-api-cli": "dist/index.js"
+    "meta-ads-open-cli": "dist/index.js"
   },
   "files": [
     "dist",
@@ -19,7 +19,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Bin-Huang/meta-ads-api-cli.git"
+    "url": "https://github.com/Bin-Huang/meta-ads-open-cli.git"
   },
   "engines": {
     "node": ">=18"

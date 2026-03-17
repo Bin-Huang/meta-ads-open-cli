@@ -1,4 +1,4 @@
-# meta-ads-api-cli
+# meta-ads-open-cli
 
 A Meta Ads CLI designed for AI agents. Wraps the official Meta Ads API with simple, agent-friendly commands.
 
