@@ -1,6 +1,6 @@
 {
   "name": "meta-ads-open-cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Meta Ads CLI for AI agents",
   "type": "module",
   "bin": {
