@@ -13,7 +13,7 @@ export function registerPixelCommands(program: Command): void {
         const creds = loadCredentials(program.opts().credentials);
         const actId = accountId.startsWith("act_") ? accountId : `act_${accountId}`;
         const params: Record<string, string> = {
-          fields: "id,name,code,creation_time,last_fired_time,is_created_by_app",
+          fields: "id,name,code,creation_time,last_fired_time,is_created_by_business",
           limit: opts.limit,
         };
         const data = await callApi({ creds, path: `${actId}/adspixels`, params });

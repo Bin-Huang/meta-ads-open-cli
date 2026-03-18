@@ -64,12 +64,14 @@ export function registerAccountCommands(program: Command): void {
   program
     .command("account-users <account-id>")
     .description("List users with access to an ad account")
+    .requiredOption("--business <id>", "Business ID associated with this ad account")
     .option("--limit <n>", "Number of results (default 100)", "100")
     .action(async (accountId: string, opts) => {
       try {
         const creds = loadCredentials(program.opts().credentials);
         const actId = accountId.startsWith("act_") ? accountId : `act_${accountId}`;
         const params: Record<string, string> = {
+          business: opts.business,
           fields: "id,name,tasks",
           limit: opts.limit,
         };

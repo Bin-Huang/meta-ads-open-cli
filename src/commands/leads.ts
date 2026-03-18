@@ -31,7 +31,7 @@ export function registerLeadCommands(program: Command): void {
       try {
         const creds = loadCredentials(program.opts().credentials);
         const params: Record<string, string> = {
-          fields: "id,created_time,field_data,ad_id,ad_name,campaign_id,campaign_name,form_id,is_organic",
+          fields: "id,created_time,field_data,ad_id,campaign_id,form_id",
           limit: opts.limit,
         };
         if (opts.after) params.after = opts.after;

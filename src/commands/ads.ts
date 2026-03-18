@@ -41,7 +41,7 @@ export function registerAdCommands(program: Command): void {
           creds,
           path: adId,
           params: {
-            fields: "id,name,adset_id,campaign_id,status,effective_status,creative,created_time,updated_time,tracking_specs,conversion_specs",
+            fields: "id,name,adset_id,campaign_id,status,effective_status,creative,created_time,updated_time,tracking_specs",
           },
         });
         output(data, program.opts().format);

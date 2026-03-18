@@ -12,7 +12,7 @@ export function registerPageCommands(program: Command): void {
       try {
         const creds = loadCredentials(program.opts().credentials);
         const params: Record<string, string> = {
-          fields: "id,name,category,fan_count,link,verification_status",
+          fields: "id,name,category,followers_count,link,verification_status",
           limit: opts.limit,
         };
         const data = await callApi({ creds, path: "me/accounts", params });
@@ -32,7 +32,7 @@ export function registerPageCommands(program: Command): void {
           creds,
           path: pageId,
           params: {
-            fields: "id,name,category,fan_count,link,about,description,website,phone,emails,location,verification_status,instagram_business_account",
+            fields: "id,name,category,followers_count,link,about,description,website,phone,emails,location,verification_status,instagram_business_account",
           },
         });
         output(data, program.opts().format);

@@ -121,10 +121,11 @@ meta-ads-open-cli ad-account 123456789
 List users with access to an ad account.
 
 ```bash
-meta-ads-open-cli account-users 123456789
+meta-ads-open-cli account-users 123456789 --business 9876543210
 ```
 
 Options:
+- `--business <id>` -- business ID associated with this ad account **required**
 - `--limit <n>` -- results per page (default 100)
 
 ### businesses
@@ -237,7 +238,7 @@ meta-ads-open-cli insights act_123456789 --date-preset last_30d --level campaign
 ```
 
 Options:
-- `--date-preset <preset>` -- date range **required**: today, yesterday, last_7d, last_14d, last_28d, last_30d, last_90d, this_month, last_month, this_year, lifetime
+- `--date-preset <preset>` -- date range **required**: today, yesterday, last_3d, last_7d, last_14d, last_28d, last_30d, last_90d, this_week_mon_today, this_week_sun_today, last_week_mon_sun, last_week_sun_sat, this_month, last_month, this_quarter, last_quarter, this_year, last_year, maximum, data_maximum
 - `--level <level>` -- breakdown level: account, campaign, adset, ad
 - `--breakdowns <breakdowns>` -- breakdown dimensions (comma-separated): age, gender, country, region, platform_position, publisher_platform, device_platform
 - `--fields <fields>` -- metric fields (comma-separated)

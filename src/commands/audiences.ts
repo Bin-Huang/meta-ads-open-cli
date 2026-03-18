@@ -54,7 +54,7 @@ export function registerAudienceCommands(program: Command): void {
         const creds = loadCredentials(program.opts().credentials);
         const actId = accountId.startsWith("act_") ? accountId : `act_${accountId}`;
         const params: Record<string, string> = {
-          fields: "id,name,description,approximate_count_lower_bound,approximate_count_upper_bound,targeting,run_status,time_created,time_updated",
+          fields: "id,name,description,approximate_count_lower_bound,approximate_count_upper_bound,targeting,run_status",
           limit: opts.limit,
         };
         if (opts.after) params.after = opts.after;

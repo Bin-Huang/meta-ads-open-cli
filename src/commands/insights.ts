@@ -7,7 +7,7 @@ export function registerInsightsCommands(program: Command): void {
   program
     .command("insights <entity-id>")
     .description("Get performance insights for an account, campaign, ad set, or ad (use act_XXXXX for accounts)")
-    .requiredOption("--date-preset <preset>", "Date range: today, yesterday, last_7d, last_14d, last_28d, last_30d, last_90d, this_month, last_month, this_year, lifetime")
+    .requiredOption("--date-preset <preset>", "Date range: today, yesterday, last_3d, last_7d, last_14d, last_28d, last_30d, last_90d, this_week_mon_today, this_week_sun_today, last_week_mon_sun, last_week_sun_sat, this_month, last_month, this_quarter, last_quarter, this_year, last_year, maximum, data_maximum")
     .option("--level <level>", "Breakdown level: account, campaign, adset, ad (default: inferred from entity)")
     .option("--breakdowns <breakdowns>", "Breakdowns: age, gender, country, region, platform_position, publisher_platform, device_platform (comma-separated)")
     .option("--fields <fields>", "Metric fields (comma-separated)")
