@@ -10,11 +10,7 @@ Meta Ads CLI for AI agents (and humans). Analyze ad performance across Meta plat
 npm install -g meta-ads-open-cli
 ```
 
-Or run directly with npx:
-
-```bash
-npx meta-ads-open-cli --help
-```
+Or run directly: `npx meta-ads-open-cli --help`
 
 ## How it works
 
