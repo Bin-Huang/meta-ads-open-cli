@@ -79,7 +79,9 @@ Ad account IDs use the `act_` prefix (e.g., `act_123456789`). This CLI accepts b
 
 ## Monetary values
 
-All monetary values (spend, budget, bid amounts) are in the ad account's currency, expressed as **cents** (or the smallest currency unit). Divide by 100 for the actual amount.
+**Insights API** (`spend` field): returned as a decimal string in the major currency unit (e.g., `"12.34"` means $12.34). No conversion needed.
+
+**Management API** (`daily_budget`, `lifetime_budget`, `bid_amount`): returned as integers in the smallest currency unit (cents). Divide by 100 for the actual amount.
 
 ## Usage
 
@@ -240,7 +242,7 @@ meta-ads-open-cli insights act_123456789 --date-preset last_30d --level campaign
 Options:
 - `--date-preset <preset>` -- date range **required**: today, yesterday, last_3d, last_7d, last_14d, last_28d, last_30d, last_90d, this_week_mon_today, this_week_sun_today, last_week_mon_sun, last_week_sun_sat, this_month, last_month, this_quarter, last_quarter, this_year, last_year, maximum, data_maximum
 - `--level <level>` -- breakdown level: account, campaign, adset, ad
-- `--breakdowns <breakdowns>` -- breakdown dimensions (comma-separated): age, gender, country, region, platform_position, publisher_platform, device_platform
+- `--breakdowns <breakdowns>` -- breakdown dimensions (comma-separated): age, gender, country, region, platform_position, publisher_platform, device_platform, impression_device
 - `--fields <fields>` -- metric fields (comma-separated)
 - `--time-increment <inc>` -- time granularity: 1 (daily), 7, 14, monthly, all_days
 - `--limit <n>` -- results per page (default 100)
