@@ -244,7 +244,7 @@ Options:
 - `--level <level>` -- breakdown level: account, campaign, adset, ad
 - `--breakdowns <breakdowns>` -- breakdown dimensions (comma-separated): age, gender, country, region, platform_position, publisher_platform, device_platform, impression_device
 - `--fields <fields>` -- metric fields (comma-separated)
-- `--time-increment <inc>` -- time granularity: 1 (daily), 7, 14, monthly, all_days
+- `--time-increment <inc>` -- time granularity: any integer 1-90 (days per row, e.g. 1 for daily, 7 for weekly, 14 for bi-weekly), monthly, all_days
 - `--limit <n>` -- results per page (default 100)
 - `--after <cursor>` -- pagination cursor
 
