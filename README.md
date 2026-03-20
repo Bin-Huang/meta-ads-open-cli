@@ -6,8 +6,17 @@ Meta Ads CLI for AI agents (and humans). Analyze ad performance across Meta plat
 
 ## Installation
 
+Tell your AI agent (e.g. OpenClaw):
+
+> Install the CLI and skills from https://github.com/Bin-Huang/meta-ads-open-cli
+
+Or install manually:
+
 ```bash
 npm install -g meta-ads-open-cli
+
+# Add skills for AI agents (Claude Code, Cursor, Codex, etc.)
+npx skills add Bin-Huang/meta-ads-open-cli
 ```
 
 Or run directly: `npx meta-ads-open-cli --help`
