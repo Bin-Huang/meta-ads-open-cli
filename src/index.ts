@@ -17,7 +17,7 @@ const program = new Command();
 
 program
   .name("meta-ads-open-cli")
-  .description("Meta Ads CLI for AI agents (Facebook, Instagram, Messenger, Audience Network)")
+  .description("Meta Ads CLI & Skills for AI agents (Facebook, Instagram, Messenger, Audience Network)")
   .version(version)
   .option("--format <format>", "Output format", "json")
   .option("--credentials <path>", "Path to credentials JSON file")
